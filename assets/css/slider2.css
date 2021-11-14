@@ -1,0 +1,106 @@
+.srv-slider {
+    background: #f6f6f8;
+    /* padding: 40px 36px 32px; */
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    max-height: 500px !important;
+    width: 400px;
+    margin-right: 50px;
+}
+
+.srv-slider:hover {
+    -webkit-box-shadow: 0px 21px 65px 20px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0px 21px 65px 20px rgba(0, 0, 0, 0.12);
+    -ms-box-shadow: 0px 21px 65px 20px rgba(0, 0, 0, 0.12);
+    -o-box-shadow: 0px 21px 65px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.12);
+    background: #f6f6f8;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+}
+
+.srv-slider .srv-icon {
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #6382f7;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin-top: -90px;
+    margin-bottom: 22px;
+}
+
+.srv-slider:hover .srv-icon {
+    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+    transition: all 1000ms ease;
+}
+
+.srv-slider .srv-icon img {
+    margin-top: 24px;
+}
+
+.srv-icon:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #6382f7;
+    left: 50%;
+}
+
+.srv-slider h4 {
+    font-size: 22px;
+    margin-bottom: 17px;
+}
+
+
+/* --- Slider Animation --- */
+
+.srv-slider-container {
+    margin-top: 100px;
+    display: flex;
+    width: calc(400px * 9);
+    animation: scroll 40s linear infinite;
+}
+
+.srv-slider-container:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 4.5));
+    }
+}
+
+.srv-slider-container::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+#srv-slider-holder {
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 576px) {
+    .srv-slider {
+        width: 200px;
+        padding: 10px;
+    }
+}

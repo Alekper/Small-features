@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* unnecessary - for visual convenience
+
+    |
+    v
+
+*/
+
+#ba-cont-holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ba-cont {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    margin-bottom: 30px;
+}
+
+.ba-wrapper {
+    position: relative;
+    height: 270px;
+    width: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    border: 7px solid #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ba-wrapper .ba-images {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.ba-wrapper .ba-images .ba-img-1 {
+    height: 100%;
+    width: 100%;
+    background: url("../img/ev.jpg") no-repeat;
+}
+
+.ba-wrapper .ba-images .ba-img-2 {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background: url("../img/Everest.jpg") no-repeat;
+}
+
+.ba-wrapper .ba-slider {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.ba-wrapper .ba-slider input {
+    width: 100%;
+    outline: none;
+    background: none;
+    -webkit-appearance: none;
+}
+
+.ba-slider input::-webkit-slider-thumb {
+    height: 270px;
+    width: 3px;
+    background: none;
+    -webkit-appearance: none;
+    cursor: col-resize;
+}
+
+.ba-slider .ba-drag-line {
+    width: 3px;
+    height: 270px;
+    position: absolute;
+    left: 49.85%;
+    pointer-events: none;
+}
+
+.ba-slider .ba-drag-line::before,
+.ba-slider .ba-drag-line::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+
+.ba-slider .ba-drag-line::before {
+    top: 0;
+}
+
+.ba-slider .ba-drag-line::after {
+    bottom: 0;
+}
+
+.ba-slider .ba-drag-line span {
+    height: 28px;
+    width: 28px;
+    border: 3px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ba-slider .ba-drag-line span::before,
+.ba-slider .ba-drag-line span::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    border: 8px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ba-slider .ba-drag-line span::before {
+    left: 40%;
+    border-left-color: #fff;
+}
+
+.ba-slider .ba-drag-line span::after {
+    left: 60%;
+    border-top-color: #fff;
+}
